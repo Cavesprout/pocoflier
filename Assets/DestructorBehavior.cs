@@ -8,11 +8,13 @@ public class DestructorBehavior : MonoBehaviour
     public float bulletSpeed = 5000;
 
     private float lifetime;
+    private Rigidbody destructorRB;
 
     // Start is called before the first frame update
     void Start()
     {
         lifetime = maxLifetime;
+        destructorRB = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class DestructorBehavior : MonoBehaviour
         } else
         {
             lifetime--;
-            transform.Translate(Vector3.left * bulletSpeed * Time.deltaTime);
+            destructorRB.AddRelativeForce(Vector3.left * bulletSpeed * Time.deltaTime);
         }
     }
 

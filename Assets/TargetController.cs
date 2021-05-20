@@ -7,7 +7,7 @@ public class TargetController : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         Debug.Log("Detected collision between " + gameObject.name + " and " + other.collider.name);
-        if (other.collider.name == "ParticleBullet")
+        if (other.collider.name == "ParticleBullet(Clone)")
         {
             GetComponent<Renderer>().material = hitMaterial;
         }

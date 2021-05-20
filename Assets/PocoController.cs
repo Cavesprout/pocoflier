@@ -47,7 +47,7 @@ public class PocoController : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, Mathf.Infinity))
             {
-                Instantiate(target, hit.point, new Quaternion());
+                //Instantiate(target, hit.point, new Quaternion());
             }
             Instantiate(bullet1, bulletSpawnPoint.transform.position, transform.rotation);
             
